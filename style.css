@@ -1,0 +1,72 @@
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: darkgray;
+}
+
+body section {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: black;
+}
+
+body section a {
+  border-radius: 50%;
+}
+
+body section a canvas {
+  border-radius: 50%;
+  -webkit-box-shadow: white 0px 0px 0px;
+          box-shadow: white 0px 0px 0px;
+  -webkit-transition: -webkit-box-shadow 0.5s ease-in-out, -webkit-filter 0.2s ease-in-out;
+  transition: -webkit-box-shadow 0.5s ease-in-out, -webkit-filter 0.2s ease-in-out;
+  transition: box-shadow 0.5s ease-in-out, filter 0.2s ease-in-out;
+  transition: box-shadow 0.5s ease-in-out, filter 0.2s ease-in-out, -webkit-box-shadow 0.5s ease-in-out, -webkit-filter 0.2s ease-in-out;
+}
+
+body section a canvas.red {
+  -webkit-box-shadow: white 10px 10px 10px;
+          box-shadow: white 10px 10px 10px;
+}
+
+body section a canvas.red:hover {
+  -webkit-filter: blur(10px);
+          filter: blur(10px);
+}
+
+body section a h1 {
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-family: 'General Sans', sans-serif;
+  font-size: 150px;
+  color: white;
+  font-weight: 100;
+  -webkit-transition: opacity 0.2s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
+  pointer-events: none;
+}
+
+body section a h1.visible {
+  opacity: 1;
+}
+/*# sourceMappingURL=style.css.map */

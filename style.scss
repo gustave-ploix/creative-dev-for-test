@@ -1,0 +1,86 @@
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+
+
+    background-color: darkgray;
+
+
+    section {
+
+        width: 100%;
+        height: 100%;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        background-color: black;
+        
+
+        a {
+
+            border-radius: 50%;
+            
+            canvas {
+                
+                border-radius: 50%;
+                box-shadow: white 0px 0px 0px;
+                transition: box-shadow 0.5s ease-in-out,
+                filter 0.2s ease-in-out;
+
+               
+                
+                
+                &.red {
+                    box-shadow: white 10px 10px 10px;
+
+
+                    &:hover {
+                        filter: blur(10px);
+                    }
+                }
+                
+
+            }
+
+            h1 {
+
+                opacity: 0;
+
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                font-family: 'General Sans', sans-serif;
+                font-size: 150px;
+                color: white;
+                font-weight: 100;
+
+                transition: opacity 0.2s ease-in-out;
+
+                pointer-events: none;
+               
+                &.visible {
+                    opacity: 1;
+                }
+            }
+        }
+        
+    }
+}
+
+// @keyframes turn {
+//     from {
+//         transform: rotate(0deg);
+//     }   
+//     to {
+//         transform: rotate(360deg);
+//     }
+// }
